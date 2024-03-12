@@ -58,7 +58,7 @@ address {
   font-style: normal;
 }
 
-* {
+ {
   box-sizing: border-box;
 }
 
@@ -102,6 +102,12 @@ body {
 }
 
 .menu {
+  display: none;
+}
+
+.contact-block {
+  font-style: normal;
+  margin-left: auto;
   display: none;
 }
 
@@ -195,6 +201,7 @@ body {
   }
 }
 
+/*Hero style*/
 .hero {
   max-width: 320px;
   margin-left: auto;
@@ -259,20 +266,22 @@ body {
   }
 }
 
-/* .hero { max-width: 1440px; 
-  margin-left: auto; 
-  margin-right: auto; 
-  background: #2e2f42; 
-  padding-bottom: 188px 0; 
-  padding: 188px 0; 
-  background-size: cover; 
+.hero {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #2e2f42;
+  padding-bottom: 188px 0;
+  padding: 188px 0;
+  background-size: cover;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-  url("../images/hero/bg.jpg") ; 
-  background-repeat: no-repeat; 
-  background-position: center; } */
+    url("../images/hero/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .main-title {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
