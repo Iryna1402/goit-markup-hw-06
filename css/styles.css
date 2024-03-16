@@ -58,6 +58,8 @@ body {
 
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  margin-right: auto;
+  margin-left: auto;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
@@ -101,7 +103,6 @@ body {
 .open-menu-btn {
   padding: 0;
   background-color: transparent;
-  cursor: pointer;
   line-height: 0;
   border: none;
 }
@@ -198,6 +199,7 @@ body {
 /*Hero style mobile*/
 
 .main-title {
+  max-width: 320px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   max-width: 216px;
   margin-bottom: 72px;
@@ -206,14 +208,13 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.1111;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
 }
 
 .hero {
-  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
   background: #2e2f42;
@@ -269,7 +270,6 @@ body {
 
 @media screen and (min-width: 768px) {
   .hero {
-    max-width: 768px;
     padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -285,22 +285,20 @@ body {
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url("../images/Dark-bgTab@2x.jpg");
+      url("../images/tablet/Dark-bgTab@2x.jpg");
   }
-}
-
-.main-title {
-  max-width: 496px;
-  margin-bottom: 36px;
-  font-size: 56px;
-  line-height: 1.07143;
+  .main-title {
+    max-width: 496px;
+    margin-bottom: 36px;
+    font-size: 56px;
+    line-height: 1.07143;
+  }
 }
 
 /*Hero style desktop*/
 
 @media screen and (min-width: 1158px) {
   .hero {
-    max-width: 1158px;
     padding: 188px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -547,6 +545,8 @@ body {
 
 .portfolio-list-item {
   margin-bottom: 48px;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
 }
 
 .section-title {
@@ -643,12 +643,15 @@ body {
 /*Style footer mobile*/
 
 .page-footer {
-  background-color: #2e2f42;
+  background: #2e2f42;
   padding: 96px 0;
 }
 
-.footer-container {
-  display: block;
+.footer-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
 .logo-footer {
@@ -659,9 +662,8 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+
   margin-bottom: 17px;
 }
 
@@ -670,13 +672,13 @@ body {
 }
 
 .footer-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  /* background-color: #2e2f42;
-  max-width: 264px; */
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .social-text {
@@ -685,11 +687,8 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  margin-top: 72px;
-  margin-bottom: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  padding-bottom: 16px;
 }
 
 .social-link-icon {
@@ -725,22 +724,20 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   margin-bottom: 16px;
 }
 
 .subscription-form {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
 }
 
 .subscription-input {
   width: 100%;
   border: 1px solid #fff;
   border-radius: 4px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   outline: transparent;
   background-color: transparent;
@@ -750,8 +747,7 @@ body {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #fff;
-  padding-left: 16px;
-  margin-bottom: 16px;
+  padding: 8px 16px;
 }
 
 .subscription-input::placeholder {
@@ -764,7 +760,6 @@ body {
 
 .subscribe-button {
   display: flex;
-  gap: 16px;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -781,8 +776,7 @@ body {
   border: none;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   outline: transparent;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .subscribe-button:hover,
@@ -798,80 +792,73 @@ body {
 /*Style footer tablet*/
 
 @media screen and (min-width: 768px) {
-  .logo-footer {
-    /* text-align: start; */
-  }
-  .page-footer .footer-container {
+  .footer-container {
+    width: 584px;
     display: flex;
     flex-wrap: wrap;
-    align-items: baseline;
-    /* padding-left: 108px; */
   }
-
-  .logo-footer {
+  .footer-logo {
+    display: block;
     text-align: start;
-    margin-left: 0;
-    margin-right: 0;
   }
 
   .footer-text {
     width: 264px;
-    margin-right: 24px;
-    margin-left: 96px;
+    text-align: left;
   }
 
   .box-link {
     margin-left: 24px;
+    display: inline-block;
   }
 
   .social-text {
     text-align: left;
-    padding-left: 0;
-    padding-right: 0;
   }
 
-  .footer-subscription {
-    margin-left: 96px;
+  .subscription-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
   }
 
   .footer-subscription-text {
-    text-align: left;
+    text-align: start;
   }
 
   .subscription-input {
-    display: flex;
-    gap: 24px;
+    width: 264px;
   }
 }
 
 /*Style footer desktop*/
 
 @media screen and (min-width: 1158px) {
-  .page-footer {
-    padding: 100px 0;
+  .footer-container {
+    width: 1158px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .footer-subscription-text {
+    margin-left: 40px;
+  }
+  .subscription-form {
     display: flex;
     flex-wrap: nowrap;
+    gap: 24px;
+    margin-left: 40px;
   }
 
-  /* .footer-logo {
-    margin-right: 96px;
-    justify-content: flex-start;
-  } */
-  .footer-text {
-    margin-left: 0;
+  .footer-logo {
     margin-right: 120px;
-    margin-bottom: 0;
   }
   .box-link {
-    margin-right: 80px;
     margin-bottom: 0;
   }
 
-  .footer-subscription {
-    margin-left: auto;
-  }
-  .subscribe-button {
-    margin-right: auto;
+  .subscription-input {
+    opacity: 1;
   }
 }
 
@@ -1052,21 +1039,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 288px;
-  min-height: 623px;
   padding: 72px 16px 24px 16px;
   background-color: #fcfcfc;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (min-width: 768px) {
-  .modal-container {
-    width: 408px;
-    min-height: 584px;
-    padding: 72px 24px 24px 24px;
-  }
 }
 
 .close-button {
@@ -1113,18 +1091,23 @@ body {
 }
 
 .modal-subscription-form {
-  max-width: 256px;
+  /* max-width: 256px; */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
 }
 
+.modal-form-wrapper {
+  margin-bottom: 8px;
+}
+
 .modal-form-label {
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .modal-form-input {
@@ -1140,19 +1123,15 @@ body {
 }
 
 .modal-input-wrap {
-  margin-bottom: 8px;
+  position: relative;
 }
 
 .modal-icon {
-  position: relative;
-  top: 100%;
+  position: absolute;
+  top: 50%;
   left: 16px;
-  transform: translateY(-120%);
+  transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-input-wrap:nth-child(4) {
-  margin-bottom: 16px;
 }
 
 .modal-textarea {
@@ -1188,15 +1167,17 @@ body {
 }
 
 .checkbox-label {
-  margin-right: 8px;
+  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: flex;
+  gap: 8px;
 }
 
 .modal-checkbox-icon {
-  width: 16px;
+  width: 20px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1207,11 +1188,11 @@ body {
   justify-content: center;
   align-items: center;
   fill: transparent;
-  margin-right: 8px;
+  margin: auto;
 }
 
 .modal-checkbox-icon {
-  width: 16px;
+  width: 20px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -1241,7 +1222,6 @@ body {
   display: block;
   border-radius: 4px;
   padding: 16px 32px;
-  margin-right: 8px;
   min-width: 169px;
   height: 56px;
   background-color: #4d5ae5;
@@ -1260,4 +1240,31 @@ body {
 .modal-form-subscription-button:hover,
 .modal-form-subscription-button:focus {
   background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-container {
+    width: 408px;
+    height: 584px;
+  }
+  .checkbox-label {
+    display: block;
+  }
+
+  .modal-form-input {
+    width: 360px;
+    height: 40px;
+  }
+
+  .modal-checkbox-icon {
+    width: 16px;
+    margin-right: 6px;
+  }
+}
+
+@media screen {
+  .modal-container {
+    width: 408px;
+    height: 584px;
+  }
 }
