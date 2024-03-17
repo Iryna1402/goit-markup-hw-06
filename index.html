@@ -671,14 +671,16 @@
         <div class="footer-subscription">
           <p class="footer-subscription-text">Subscribe</p>
           <form class="subscription-form" name="subscription">
-            <label class="subscription-input-label">
-              <input
-                class="subscription-input"
-                type="email"
-                name="email"
-                placeholder="E-mail"
-              />
-            </label>
+            <div class="box-input-btn">
+              <label class="subscription-input-label">
+                <input
+                  class="subscription-input"
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                />
+              </label>
+            </div>
             <button class="subscribe-button" type="submit">
               Subscribe
               <svg class="subscribe-icon" width="24" height="24">
@@ -690,7 +692,7 @@
       </div>
     </footer>
     <!--Modal section-->
-    <div class="backdrop is-open">
+    <div class="backdrop">
       <div class="modal-container">
         <button class="close-button" type="button">
           <svg class="close-icon" width="8" height="8">
